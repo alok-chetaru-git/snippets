@@ -1,0 +1,12 @@
+<script>
+  jQuery(document).bind('ready ajaxComplete', function(){
+    jQuery('body.template-product .cbb-frequently-bought-selector-list .cbb-recommendations-variant-select').each(function(){
+      if( jQuery("option:selected", this).text() == 'S' ){
+         var valueML = jQuery(this).find('option').filter(function() { return $(this).text() === 'M/L'; }).attr('value');
+         if( valueML != undefined ) { jQuery(this).val(valueML).trigger('change'); }
+         var valueM = jQuery(this).find('option').filter(function() { return $(this).text() === 'M'; }).attr('value');
+         if( valueM != undefined ) { jQuery(this).val(valueM).trigger('change'); }
+      }
+    })
+  });
+</script>
