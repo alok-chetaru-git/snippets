@@ -1,0 +1,5 @@
+<picture>
+  <source srcset="large.png" media="(min-width: 758)">
+  <source srcset="medium.png" media="(min-width: 480)">
+  <img fetchpriority="high" src="small.png" alt="A description of the image." width="480" height="650">
+</picture>
